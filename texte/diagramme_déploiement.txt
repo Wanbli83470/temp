@@ -1,0 +1,22 @@
+*** Rôles : 
+Le diagramme de déploiement fait parti des diagrammes structuraux (statique), il représente :
+* la disposition physique des ressources matérielles qui constituent le système et montre la répartition
+des composants (élément logiciels) sur ces matériels.
+* La nature des connexions de communication entre les différentes ressources matérielles.
+
+*** Diagramme de Composants/Déploiement : 
+Tandis que les composants mettent en évidence les relations de dépendances, le déploiement suivant identifie aussi des éléments de le réalité physique comme un ordinateur, une imprimante, un modem, un serveur...
+
+*** Introduction :
+Le diagramme de déploiement est représenté ici par 5 "noeuds". Ces noeuds sont des classeurs ayant la forme de boites en 3 dimensions contenants les composants régissant le programme.
+On décrit donc ici le déploiement physique des informations généres pas le Logiciel Principal OC PIZZA, ces informations sont appellée artefact dans le jargon.
+
+*** Relations :
+
+* Au sein de ce diagrammes, les lignes d'associations représentées par des flèches représentent l'échange d'information entre le back end et le site web en ligne/l'application mobile. 
+
+* Le système bancaire et l'API fournissent eux des autorisation et des informations géographiques, votre site web sera donc dépendant de ces composants illustrés ici par les pointillets.
+
+* l'espace utilisateur contient lui une sous-boite représentant le navigateur et plus spécifiquement le "décodage" grahpique du HTML5 pour afficher des informations compréhensibles à l'utilsateurs. l'échange d'informations allant dans les deux sens c'est ici une double flèche qui caractérise ce même échange.
+
+* L'imprimante ici présente intéragira directement avec le programme Back end fournissant automatiquement le PDF imprimable de la commande du client.

@@ -1,0 +1,44 @@
+intro Je vais vous présenter le second dossier de la pizzeria OC pizza, ce dossier vient
+décrire une solution technique articulé de la base de données relationnel.
+Je vais donc vous présenter 3 diagrammes celui de classe, de composants et celui de déploiement.
+De ces 3 diagrammes découle le modèle physique de données.
+
+
+le diagramme de classe illustre donc des objets, chaque objets à alors ses attributs.
+dans la futur BDD une table correspond à un objet et les collones correspondent aux attributs.
+Toutes les données enregistrés seront nommées des intances et correspondent aux lignes dans la BDD.
+J'ai décomposé le shéma en une quizaine de classe, répartie en 4 grandes catégories de classes que sont : La pizzeria, le système de paiement, Le stock de pizza, et la gestions commande/clients.
+
+On décrit par la suite les relations entre ces classes en précisant le nom de cette association
+les chiffres disposés des deux côtés décrivent les multiplicités.
+on retrouve alors 3 types de multiplicités
+1 à 1
+1 à plusieurs
+plusieurs à plusieurs
+
+Voici un exemple de lecture
+une commande peut être passé par un client, mais un client peut passer plusieurs commandes.
+Une pizza correspond à une recette et une recette ne correspond qu'à une pizza
+Toutes les relations décritent permettront de gérer plus tard les relations dans la BDD (clef étrangères etc...)
+
+
+Le diagramme de composants décrit lui les relations entres les composants j'ai distingué les composants en deux grands packages de composants : interne et externe.
+
+Dans les composants externe, on retrouve l'api Bancaire et de Localisation, Mais aussi le navigateur qui est aussi un composant concret et indispensable pour le client.
+Du côté interne on retrouve le serveur et la BDD entre ces deux-ci on fais la relation grâce aux fichiers python coder à l'aide du framework Django. Django dispose par ailleur de son propre ORM et c'est celui-ci qui gère les requêtes SQL et communique avec la BDD.
+C'est le serveur qui fourni le "flux html" nécéssaire au dynamisme du site en ligne. de l'autre côté c'est le navigateur et les intéractions du clients qui envoit des requêtes.
+
+Les deux API envoi respectivement des autorisations bancaire ou bien des données de localisation.
+
+
+
+Voici le diagramme de déploiement, celui-ci sensiblement simmilaire au diagramme de composant, mais est oragnisé en grandes boites contenant les composants et je me suis permis d'ajouter une imprimante local à la pizzeria qui permettre donc d'imprimer le fichier pdf automatiquement générer une fois la facture enregistré et validé.
+On peut notamment voir deux 2 types communiquant avec le serveur ces deux types pourrait être par exemple l'application mobile et le site web initial en ligne. L'application mobile pourrait être très utile aux livreurs et éventuellement même aux clients désireux de suivre ou passer leur commande avant de rentrer à leur domicile.
+
+Pour finir la présentation du dossier, voici le modèle physique de données découlant du diagramme de classe, il différe de ce dernier sur quelques points :
+l'ajout des clefs primaire et étrangères.
+Le rôle de index.
+la précision du types de données utilisé (varchar, integer, char...)
+
+les clefs étrangères permettent d'éviter les doublons et assure le référencement entre deux tables, on en retrouve dans presque toutes les tables, par exemple l'ID d'un client est référencé dans la table facture par une collone client_ID.
+Les index permettent d'assurer les performances et l'optimisation de la BDD.

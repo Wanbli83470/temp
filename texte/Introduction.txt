@@ -1,0 +1,11 @@
+OC PIZZA souhaite 
+
+suite à la réalisation du dossier de spécification fonctionnelles ayant permis de dresser les diagrammes de package, de cas d'utilisation et d'activités. Ce dossier vient détailler les solutions techniques à travers 3 grands diagrammes :
+
+*** Diagramme de classe
+
+*** Diagramme de composants
+
+*** Diagramme de déploiement
+
+Le modèle Physique de données en fin de document établie à partir du diagramme de classe, permet de décrire concrètement et physiquement les tables de la base de données ainsi que leurs relations de clef primaires étrangères, les index détaillés.

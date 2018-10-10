@@ -1,0 +1,20 @@
+*** Introduction :
+Le diagramme de composants permet d'identifier visuellement les différents composants concrets, techniques internes et externes à votre site web de pizzeria. Ils contiennent par exemple les exécutables, les bibliothèques, les fichiers... Mais aussi des données comme la base de données. On met ici en évidence les dépendances (Quel composant utilise quel composant ?)
+
+Les composants fournissent des interfaces; pour fonctionner ils ont besoin d'autres composants, 
+on appelle "interface fournie" (représentées par un cercle) et "interface requise" (représentées par un demi-cercle) ces connecteurs d'assemblages.
+
+Enfin, les carrées aux extrémités des composants (aussi appellées "ports" servent de point de connexion aux connecteur d'assemblage définit précédemment 
+
+
+*** Relations :
+
+* Les composants sont répertoriés en 2 grands systèmes de composants : 1 les composants tiers et 2 les programmes serveurs. Ces grands paquets interagissent ensemble et s'échangent des informations dynamiquement pour les fournir ensuite à l'utilisateur.
+En effet le serveur et le Back-end (c'est-à-dire la surface invisible mais nécessaire au fonctionnement de votre programme, fournissant l'interaction entre les données entrantes et sortantes) sont contenus dans un grand composant "Serveur".
+ 
+* De l'autre côté on retrouve le navigateur clients affichant les informations après interpration du code HTML fournie par le Back End. l'API Google maps et du paiement font aussi partie de cet ensemble car ils sont extérieurs au système principal. C'est donc ces API qui vont fournir des informations comme des autorisation de paiements ou bien des coordonnées géographique.
+
+* Techniquement votre base de données est gérés par un ORM propre au Framework Django du langage Python. Cet ORM (object-relational mapping) simule une base de données relationnelles orientés objet, comme vue précédement dans le diagramme de classe. La bases de données POSTREGRESQL communique avec L'ORM
+
+*** 
+Ces composants ici détaillés physiquements sont de nouveaux présents dans le déploiement (abstraction des concepts) de ces composants expliqué dans la page suivante.

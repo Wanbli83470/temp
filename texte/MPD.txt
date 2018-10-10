@@ -1,0 +1,18 @@
+Le modèle de données présent ici découle du diagramme de classe. sa création aboutie à l'implémentation d'une base de données relationelle au sein d'un SGBDR.
+
+*** Clef primaires :
+Les clefs primaires vont permettre d'identifier de manières unique un ensemble de données.
+J'ai conçu les clef primaires en respectant deux critères : la constance et l'unicité. Apartir de ces critères on crée une clef primaire composite ou bien à l'aide d'un attribut ID dans une nouvelle colonne.  On note la dénomination [PK]
+
+*** clefs étrangères :
+Les clefs étrangères découlent donc des relations de multiplicités illustrés plus tôt ! En effet le livreur conduit un scooter, on retrouve donc l'ID (clef primaire) de notre classe livraison en clef étrangère de notre classe Véhicule en guise de conducteur.
+La relation entre notre table Pizza et Employé est légèrement différente, un employé peux préparer plusieurs pizza mais une pizza ne peut être préparée que par un pizzaiolo. On retrouve alors l'ID de d'un pizzaiolo en clef étrangères sur plusieurs lignes de notre table pizza.
+
+
+*** Le rôle des index :
+Afin d'optimiser la recherche dans la BDD l'index pointe directement les lignes de la table à l'aide d'un critère.
+J'ai crée notamment des index notamment sur les tables contenant des codes postal et des noms dans un ordre croissant en ajoutant une caractéristique "clustered" sur ces index. Si les collones forment un groupe, on peut paramétrer l'index comme étant unique.
+On note la dénomination [AK].
+
+***  DUMP
+Le dump en image ci dessous est une sauvegarde des instructions en languages SQL de l'insertion des données et de la constitution des tables.

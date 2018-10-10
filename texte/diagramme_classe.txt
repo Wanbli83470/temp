@@ -1,0 +1,17 @@
+1 introduction :
+le diagramme de classe : ce diagramme représente toutes les entités internes ou externes à votre programme. On appelle toute ces entités des "classes". Ici, votre shéma contient une quizaine de classe, répartie en 4 grandes catégories de classes que sont : La pizzeria, le système de paiement, Le stock de pizza, et la gestions clients.
+
+2 Développement :
+on retrouve entre vos classes 3 grands types de relations décrivant les intéractions et échanges entre ces classes. des relations de composition, d'agrégation et de multiplicités.
+
+Pour exemple, ici la facture dépend du système de commande et ne peut être présente sans commande, vos commandes seront donc composés de factures. Ces mêmes factures sont en relations avec l'email et le client. De ce fait, toutes ses données sont donc dépendantes des informations saisie par le client lors de la commande et la facture est le résultat de ces autres classes.
+
+Par ailleurs, on voit que la gestion des stocks est découpée en 3 entités "recettes", "ingrédients" et "stocks". la classe stock aura pour attributs des quantités, une disponibilité sous forme de vrai ou faux (aussi appellé Booléan) mais aussi une catégorie d'ingrédients. Un fournisseur sera donc associer à votre stock et pourra prendre en charge une ou plusieurs catégories d'ingrédients.
+
+Le système de paiement, est lui divisé en 2 classes externe et une interne. on retrouve comme dans chaque classe un ID (ici de paiement). Mais aussi une Date, un entier réel indiquant le montant du versements. Les paiements externes sont donc ici liées à vos fournisseurs. Tandis que les paiements internes sont liées à vos clients. On retrouve un ID en clef étrangère ce qui permet de référencer avec exactitude la colonne du receveur dans la table paiement
+
+Les pizzas sont associées chacunes à des catégories permettant de plus vite effectuer les requêtes et recherches dans la future base de données. Ces mêmes pizzas seront préparés par un seul employés par pizzeria, cet employé lui peut travailler pour toutes les pizzeria du groupe OC PIZZA mais est assigné à une spécifique.
+
+
+3 Conclusion : 
+A partir de ces relations entre classes permettant de poser les bases d'échanges entre vos classes, j'ai crée un modèle physique et concret de données représentant votre Base de données finale. Aussi appallé MPD, voici en détail sa présentation
